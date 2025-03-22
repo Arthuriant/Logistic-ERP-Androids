@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="6dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="12dp"
+        android:gravity="center_vertical">
+
+        <!-- Bagian Teks -->
+        <LinearLayout
+            android:layout_width="245dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:orientation="vertical"
+            android:paddingEnd="12dp">
+
+            <TextView
+                android:id="@+id/tv_usersname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nama Supply"
+                android:textColor="#1687A7"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginVertical="4dp"
+                android:background="#276678" />
+
+            <TextView
+                android:id="@+id/usersemail"
+                android:layout_width="match_parent"
+                android:layout_height="27dp"
+                android:layout_marginTop="10dp"
+                android:text="kontak: 083154577112"
+                android:textColor="#555555"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/userspassword"
+                android:layout_width="match_parent"
+                android:layout_height="29dp"
+                android:text="Alamat:"
+                android:textColor="#555555"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_usersrole"
+                android:layout_width="match_parent"
+                android:layout_height="27dp"
+                android:text="Produk:"
+                android:textColor="#555555"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:gravity="bottom|end"
+            android:orientation="vertical"
+            android:paddingRight="10dp">
+
+            <ImageButton
+                android:id="@+id/btn_editusers"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="#00FFFFFF"
+                android:contentDescription="Edit"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/ic_edit" />
+
+            <ImageButton
+                android:id="@+id/btn_deleteusers"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="5dp"
+                android:background="#00FFFFFF"
+                android:contentDescription="delete kategori"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/ic_delete" />
+
+        </LinearLayout>
+
+        <!-- Gambar Produk -->
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="25dp">
+
+    <!-- Nama Produk -->
+    <TextView
+        android:id="@+id/tv_titleform"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:text="Tambah Supplier"
+        android:textAlignment="center"
+        android:textColor="#276577"
+        android:textSize="34sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/et_suppliername"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:drawable/editbox_background"
+        android:hint="Nama Supplier"
+        android:inputType="text"
+        android:minHeight="48dp"
+        android:padding="10dp" />
+
+    <!-- Kode Barang -->
+    <EditText
+        android:id="@+id/et_suppliercontact"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@android:drawable/editbox_background"
+        android:hint="Kontak"
+        android:inputType="text"
+        android:minHeight="48dp"
+        android:padding="10dp" />
+
+    <!-- ID Kategori -->
+    <EditText
+        android:id="@+id/et_supplieraddres"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@android:drawable/editbox_background"
+        android:hint="Alamat"
+        android:inputType="number"
+        android:minHeight="48dp"
+        android:padding="10dp" />
+
+    <!-- Stok Minimum -->
+
+    <!-- Harga Beli -->
+
+    <!-- Harga Jual -->
+
+    <!-- Tombol Simpan -->
+    <EditText
+        android:id="@+id/et_suppliersupplies"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@android:drawable/editbox_background"
+        android:hint="Produk Supply"
+        android:inputType="number"
+        android:minHeight="48dp"
+        android:padding="10dp" />
+
+    <Button
+        android:id="@+id/btn_simpansupplier"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#276678"
+        android:text="Simpan"
+        android:textColor="#FFFFFF" />
+</LinearLayout>

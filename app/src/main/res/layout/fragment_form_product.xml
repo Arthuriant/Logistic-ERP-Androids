@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="25dp">
+
+    <!-- Nama Produk -->
+    <TextView
+        android:id="@+id/tv_titleform"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:text="Tambah Produk"
+        android:textAlignment="center"
+        android:textColor="#276577"
+        android:textSize="34sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/et_productname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        android:background="@android:drawable/editbox_background"
+        android:hint="Nama Produk"
+        android:inputType="text"
+        android:padding="10dp" />
+
+    <!-- Kode Barang -->
+    <EditText
+        android:id="@+id/et_productnamecode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        android:layout_marginTop="8dp"
+        android:background="@android:drawable/editbox_background"
+        android:hint="Kode Barang"
+        android:inputType="text"
+        android:padding="10dp" />
+
+    <!-- ID Kategori -->
+    <EditText
+        android:id="@+id/et_productcategory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        android:layout_marginTop="8dp"
+        android:background="@android:drawable/editbox_background"
+        android:hint="ID Kategori"
+        android:inputType="number"
+        android:padding="10dp" />
+
+    <!-- Stok Minimum -->
+    <EditText
+        android:id="@+id/et_stokminimum"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        android:layout_marginTop="8dp"
+        android:background="@android:drawable/editbox_background"
+        android:hint="Stok Minimum"
+        android:inputType="number"
+        android:padding="10dp" />
+
+    <!-- Harga Beli -->
+    <EditText
+        android:id="@+id/et_productbuy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        android:layout_marginTop="8dp"
+        android:background="@android:drawable/editbox_background"
+        android:hint="Harga Beli"
+        android:inputType="numberDecimal"
+        android:padding="10dp" />
+
+    <!-- Harga Jual -->
+    <EditText
+        android:id="@+id/et_productsell"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        android:layout_marginTop="8dp"
+        android:background="@android:drawable/editbox_background"
+        android:hint="Harga Jual"
+        android:inputType="numberDecimal"
+        android:padding="10dp" />
+
+    <!-- Tombol Simpan -->
+    <Button
+        android:id="@+id/btn_simpanproduk"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#276678"
+        android:text="Simpan"
+        android:textColor="#FFFFFF" />
+</LinearLayout>

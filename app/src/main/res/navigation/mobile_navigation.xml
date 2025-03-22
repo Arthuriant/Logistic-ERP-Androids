@@ -3,23 +3,43 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/navigation_home">
+    app:startDestination="@+id/navigation_product">
+
+
 
     <fragment
-        android:id="@+id/navigation_home"
-        android:name="andika.polman.logisticerp2.ui.home.HomeFragment"
-        android:label="@string/title_home"
-        tools:layout="@layout/fragment_home" />
+        android:id="@+id/navigation_product"
+        android:name="andika.polman.logisticerp2.ui.product.ProductFragment"
+        android:label="Product"
+        tools:layout="@layout/fragment_product" />
 
     <fragment
-        android:id="@+id/navigation_dashboard"
-        android:name="andika.polman.logisticerp2.ui.dashboard.DashboardFragment"
-        android:label="@string/title_dashboard"
-        tools:layout="@layout/fragment_dashboard" />
+        android:id="@+id/navigation_product_category"
+        android:name="andika.polman.logisticerp2.ui.productcategory.ProductCategoryFragment"
+        android:label="ProductCategory"
+        tools:layout="@layout/fragment_product_category" />
 
     <fragment
-        android:id="@+id/navigation_notifications"
-        android:name="andika.polman.logisticerp2.ui.notifications.NotificationsFragment"
-        android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_notifications" />
+        android:id="@+id/navigation_supplier"
+        android:name="andika.polman.logisticerp2.ui.supplier.SupplierFragment"
+        android:label="Supplier"
+        tools:layout="@layout/fragment_supplier" />
+
+    <fragment
+        android:id="@+id/navigation_users"
+        android:name="andika.polman.logisticerp2.ui.users.UsersFragment"
+        android:label="Users"
+        tools:layout="@layout/fragment_users" />
+
+    <fragment
+        android:id="@+id/navigation_formproduct"
+        android:name="andika.polman.logisticerp2.ui.product.FormProductFragment"
+        android:label="Form Product"
+        tools:layout="@layout/fragment_form_product" />
+
+    <action
+        android:id="@+id/action_productFragment_to_formProductFragment"
+        app:destination="@id/navigation_formproduct" />
+
+
 </navigation>

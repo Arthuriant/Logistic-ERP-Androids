@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+
+            <!-- Gambar Produk -->
+            <ImageView
+                android:id="@+id/iv_product_image"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_supplier"
+                android:contentDescription="Product Image" />
+
+            <!-- CardView untuk Informasi Produk -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="6dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:id="@+id/tv_nama_produk"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Nama Produk"
+                        android:textColor="#1687A7"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_kode_barang"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Kode Barang: 12345"
+                        android:textColor="#555555"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/tv_id_kategori"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Kategori: Elektronik"
+                        android:textColor="#555555"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/tv_stok_minimum"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Stok Minimum: 10"
+                        android:textColor="#555555"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/tv_harga_beli"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Harga Beli: Rp 50.000"
+                        android:textColor="#555555"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/tv_harga_jual"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Harga Jual: Rp 70.000"
+                        android:textColor="#555555"
+                        android:textSize="16sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/btn_editProduk"
+                            android:layout_width="25dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="50dp"
+                            android:layout_weight="1"
+                            android:text="Edit" />
+
+                        <Button
+                            android:id="@+id/btn_deleteProduk"
+                            android:layout_width="25dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:backgroundTint="#731212"
+                            android:text="Delete" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</FrameLayout>
