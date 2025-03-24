@@ -20,6 +20,12 @@
         tools:layout="@layout/fragment_product_category" />
 
     <fragment
+        android:id="@+id/navigation_formproductcategory"
+        android:name="andika.polman.logisticerp2.ui.productcategory.FormProductCategoryFragment"
+        android:label="ProductCategoryForm"
+        tools:layout="@layout/fragment_form_product_category" />
+
+    <fragment
         android:id="@+id/navigation_supplier"
         android:name="andika.polman.logisticerp2.ui.supplier.SupplierFragment"
         android:label="Supplier"
@@ -58,6 +64,15 @@
     <action
         android:id="@+id/action_detailproductFragment_to_formdetailproductfragment"
         app:destination="@id/navigation_formproduct" />
+
+    <action
+        android:id="@+id/action_productKategoriFragment_to_formkategoriproductfragment"
+        app:destination="@id/navigation_formproductcategory" />
+
+    <action
+        android:id="@+id/action_formkategoriproductfragment_to_productKategoriFragment"
+        app:destination="@id/navigation_product_category" />
+
 
 
 </navigation>

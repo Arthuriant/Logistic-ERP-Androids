@@ -8,7 +8,7 @@
 
     <!-- Nama Produk -->
     <TextView
-        android:id="@+id/tv_titleform"
+        android:id="@+id/tv_titleformcategory"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="30dp"
@@ -48,17 +48,11 @@
         android:layout_marginTop="8dp"
         android:background="@android:drawable/editbox_background"
         android:hint="Deskripsi Kategori"
-        android:inputType="number"
+        android:inputType="text"
         android:minHeight="48dp"
         android:padding="10dp" />
 
-    <!-- Stok Minimum -->
 
-    <!-- Harga Beli -->
-
-    <!-- Harga Jual -->
-
-    <!-- Tombol Simpan -->
     <Button
         android:id="@+id/btn_simpancategory"
         android:layout_width="match_parent"
