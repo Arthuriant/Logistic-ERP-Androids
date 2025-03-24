@@ -4,6 +4,8 @@ import andika.polman.logisticerp2.model.LoginRequest
 import andika.polman.logisticerp2.model.LoginResponse
 import andika.polman.logisticerp2.model.Produk
 import andika.polman.logisticerp2.model.ProdukKategori
+import andika.polman.logisticerp2.model.Supplier
+import andika.polman.logisticerp2.model.User
 import retrofit2.Call
 import retrofit2.http.Body
 import retrofit2.http.DELETE
@@ -14,6 +16,8 @@ import retrofit2.http.Path
 
 interface ApiService {
 
+    //SPESICAL
+
     @POST("login")
     fun loginUser(@Body loginRequest: LoginRequest): Call<LoginResponse>
 
@@ -22,6 +26,16 @@ interface ApiService {
 
     @GET("kategori_produk/{id}")
     fun getDetailProductCategory(@Path("id") idCategory: Int): Call<ProdukKategori>
+
+    @GET("supplier/{id}")
+    fun getDetailSupplier(@Path("id") idSupplier: Int): Call<Supplier>
+
+    @GET("users/{id}")
+    fun getDetailUser(@Path("id") idUser: Int): Call<User>
+
+
+
+    //PRODUK
 
     @GET("data_produk")
     fun getDataProduct(): Call<List<Produk>>
@@ -35,6 +49,8 @@ interface ApiService {
     @DELETE("data_produk/{id}")
     fun deleteProduct(@Path("id") id: Int): Call<ResponseMessage>
 
+    //KATEGORI PRODUK
+
     @GET("kategori_produk")
     fun getKategoriProduct(): Call<List<ProdukKategori>>
 
@@ -46,5 +62,37 @@ interface ApiService {
 
     @DELETE("kategori_produk/{id}")
     fun deleteKategoriProduct(@Path("id") id: Int): Call<ResponseMessage>
+
+    //SUPPLIER
+    @GET("supplier")
+    fun getSupplier(): Call<List<Supplier>>
+
+    @POST("supplier")
+    fun tambahSupplier(@Body supplier: Supplier): Call<ResponseMessage>
+
+    @PUT("supplier/{id}")
+    fun updateSupplier(@Path("id") id: Int, @Body supplier: Supplier): Call<ResponseMessage>
+
+    @DELETE("supplier/{id}")
+    fun deleteSupplier(@Path("id") id: Int): Call<ResponseMessage>
+
+    //User
+    @GET("users")
+    fun getAllUser(): Call<List<User>>
+
+    @GET("users/admins")
+    fun getAllUserAdmin(): Call<List<User>>
+
+    @GET("users/users")
+    fun getAllUserUser(): Call<List<User>>
+
+    @POST("users")
+    fun tambahUser(@Body user: User): Call<ResponseMessage>
+
+    @PUT("users/{id}")
+    fun updateUser(@Path("id") id: Int, @Body user: User): Call<ResponseMessage>
+
+    @DELETE("users/{id}")
+    fun deleteUser(@Path("id") id: Int): Call<ResponseMessage>
 
 }

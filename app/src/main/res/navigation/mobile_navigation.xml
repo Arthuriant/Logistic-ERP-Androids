@@ -32,10 +32,22 @@
         tools:layout="@layout/fragment_supplier" />
 
     <fragment
+        android:id="@+id/navigation_formsupplier"
+        android:name="andika.polman.logisticerp2.ui.supplier.FormSupplierFragment"
+        android:label="SupplierForm"
+        tools:layout="@layout/fragment_form_supplier" />
+
+    <fragment
         android:id="@+id/navigation_users"
         android:name="andika.polman.logisticerp2.ui.users.UsersFragment"
         android:label="Users"
         tools:layout="@layout/fragment_users" />
+
+    <fragment
+        android:id="@+id/navigation_formusers"
+        android:name="andika.polman.logisticerp2.ui.users.FormUsersFragment"
+        android:label="UsersForm"
+        tools:layout="@layout/fragment_form_users" />
 
     <fragment
         android:id="@+id/navigation_formproduct"
@@ -72,6 +84,23 @@
     <action
         android:id="@+id/action_formkategoriproductfragment_to_productKategoriFragment"
         app:destination="@id/navigation_product_category" />
+
+    <action
+        android:id="@+id/action_SupplierFragment_to_FormSupplerFragment"
+        app:destination="@id/navigation_formsupplier" />
+
+    <action
+        android:id="@+id/action_FormSupplerFragment_to_SupplierFragment"
+        app:destination="@id/navigation_supplier" />
+
+    <action
+        android:id="@+id/action_UserFragment_to_FormUserFragment"
+        app:destination="@id/navigation_formusers" />
+
+    <action
+        android:id="@+id/action_FormUserFragment_to_UserFragment"
+        app:destination="@id/navigation_users" />
+
 
 
 

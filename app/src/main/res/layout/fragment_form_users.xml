@@ -8,7 +8,7 @@
 
     <!-- Nama Produk -->
     <TextView
-        android:id="@+id/tv_titleform"
+        android:id="@+id/tv_TitleUser"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="30dp"
@@ -59,14 +59,14 @@
         android:orientation="horizontal">
 
         <CheckBox
-            android:id="@+id/checkBox2"
+            android:id="@+id/checkBoxAdmin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Admin" />
 
         <CheckBox
-            android:id="@+id/checkBox3"
+            android:id="@+id/checkBoxUser"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"

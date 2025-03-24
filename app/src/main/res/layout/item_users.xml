@@ -27,7 +27,7 @@
                 android:id="@+id/tv_usersname"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Nama Supply"
+                android:text="Nama User"
                 android:textColor="#1687A7"
                 android:textSize="16sp"
                 android:textStyle="bold" />
@@ -39,19 +39,19 @@
                 android:background="#276678" />
 
             <TextView
-                android:id="@+id/usersemail"
+                android:id="@+id/tv_usersemail"
                 android:layout_width="match_parent"
                 android:layout_height="27dp"
                 android:layout_marginTop="10dp"
-                android:text="kontak: 083154577112"
+                android:text="Email: fundito079@gmail.com"
                 android:textColor="#555555"
                 android:textSize="14sp" />
 
             <TextView
-                android:id="@+id/userspassword"
+                android:id="@+id/tv_userspassword"
                 android:layout_width="match_parent"
                 android:layout_height="29dp"
-                android:text="Alamat:"
+                android:text="**********"
                 android:textColor="#555555"
                 android:textSize="14sp" />
 
