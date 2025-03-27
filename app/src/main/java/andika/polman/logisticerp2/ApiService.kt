@@ -4,6 +4,7 @@ import andika.polman.logisticerp2.model.LoginRequest
 import andika.polman.logisticerp2.model.LoginResponse
 import andika.polman.logisticerp2.model.Produk
 import andika.polman.logisticerp2.model.ProdukKategori
+import andika.polman.logisticerp2.model.ProdukxKategori
 import andika.polman.logisticerp2.model.Supplier
 import andika.polman.logisticerp2.model.User
 import retrofit2.Call
@@ -38,7 +39,7 @@ interface ApiService {
     //PRODUK
 
     @GET("data_produk")
-    fun getDataProduct(): Call<List<Produk>>
+    fun getDataProduct(): Call<List<ProdukxKategori>>
 
     @POST("data_produk")
     fun tambahProduk(@Body produk: Produk): Call<ResponseMessage>

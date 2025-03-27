@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import andika.polman.logisticerp2.R
 import andika.polman.logisticerp2.RetrofitClient
 import andika.polman.logisticerp2.model.Produk
+import andika.polman.logisticerp2.model.ProdukxKategori
 import android.util.Log
 import android.widget.Toast
 import retrofit2.Call
@@ -22,7 +23,7 @@ import androidx.recyclerview.widget.RecyclerView
 class ProductFragment : Fragment() {
     private lateinit var recyclerViewProduk: RecyclerView
     private lateinit var produkAdapter: ProductAdapter
-    private var produkList = mutableListOf<Produk>()
+    private var produkList = mutableListOf<ProdukxKategori>()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -51,8 +52,8 @@ class ProductFragment : Fragment() {
     }
 
     private fun fetchProduk() {
-        RetrofitClient.instance.getDataProduct().enqueue(object : Callback<List<Produk>> {
-            override fun onResponse(call: Call<List<Produk>>, response: Response<List<Produk>>) {
+        RetrofitClient.instance.getDataProduct().enqueue(object : Callback<List<ProdukxKategori>> {
+            override fun onResponse(call: Call<List<ProdukxKategori>>, response: Response<List<ProdukxKategori>>) {
                 response.body()?.let {
                     produkList.clear()
                     produkList.addAll(it)
@@ -60,7 +61,7 @@ class ProductFragment : Fragment() {
                 }
             }
 
-            override fun onFailure(call: Call<List<Produk>>, t: Throwable) {
+            override fun onFailure(call: Call<List<ProdukxKategori>>, t: Throwable) {
                 Log.e("API_ERROR", "Gagal mengambil data produk", t)
             }
         })

@@ -2,6 +2,7 @@ package andika.polman.logisticerp2.ui.product
 
 import andika.polman.logisticerp2.R
 import andika.polman.logisticerp2.model.Produk
+import andika.polman.logisticerp2.model.ProdukxKategori
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -9,8 +10,8 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
 class ProductAdapter(
-    private val list: List<Produk>,
-    private val onItemClick: (Produk) -> Unit
+    private val list: List<ProdukxKategori>,
+    private val onItemClick: (ProdukxKategori) -> Unit
 ) : RecyclerView.Adapter<ProductAdapter.ViewHolder>() {
 
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
@@ -30,7 +31,7 @@ class ProductAdapter(
         val produk = list[position]
         holder.txtNamaProduk.text = produk.nama_produk
         holder.txtKodeBarang.text = "Kode Barang: ${produk.kode_barang}"
-        holder.txtIdKategori.text = "Kategori: ${produk.id_kategori}"
+        holder.txtIdKategori.text = "Kategori: ${produk.nama_kategori}"
 
         holder.itemView.setOnClickListener { onItemClick(produk) }
     }

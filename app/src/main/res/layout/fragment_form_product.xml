@@ -41,16 +41,13 @@
         android:padding="10dp" />
 
     <!-- ID Kategori -->
-    <EditText
-        android:id="@+id/et_productcategory"
+    <Spinner
+        android:id="@+id/spinner_productcategory"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:minHeight="48dp"
+        android:layout_height="63dp"
         android:layout_marginTop="8dp"
-        android:background="@android:drawable/editbox_background"
-        android:hint="ID Kategori"
-        android:inputType="number"
         android:padding="10dp" />
+
 
     <!-- Stok Minimum -->
     <EditText
