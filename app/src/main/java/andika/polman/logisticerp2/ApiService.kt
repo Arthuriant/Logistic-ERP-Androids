@@ -4,7 +4,12 @@ import andika.polman.logisticerp2.model.LoginRequest
 import andika.polman.logisticerp2.model.LoginResponse
 import andika.polman.logisticerp2.model.Produk
 import andika.polman.logisticerp2.model.ProdukKategori
+import andika.polman.logisticerp2.model.ProdukKeluar
+import andika.polman.logisticerp2.model.ProdukKeluarxProduk
+import andika.polman.logisticerp2.model.ProdukMasuk
+import andika.polman.logisticerp2.model.ProdukMasukxProdukxSupplier
 import andika.polman.logisticerp2.model.ProdukxKategori
+import andika.polman.logisticerp2.model.Report
 import andika.polman.logisticerp2.model.Supplier
 import andika.polman.logisticerp2.model.User
 import retrofit2.Call
@@ -40,6 +45,9 @@ interface ApiService {
 
     @GET("data_produk")
     fun getDataProduct(): Call<List<ProdukxKategori>>
+
+    @GET("data_produk")
+    fun getDataProductAdd(): Call<List<Produk>>
 
     @POST("data_produk")
     fun tambahProduk(@Body produk: Produk): Call<ResponseMessage>
@@ -95,5 +103,24 @@ interface ApiService {
 
     @DELETE("users/{id}")
     fun deleteUser(@Path("id") id: Int): Call<ResponseMessage>
+
+    //Incoming Item
+    @GET("barang_masuk")
+    fun getIncomingProduct(): Call<List<ProdukMasukxProdukxSupplier>>
+
+    @POST("barang_masuk")
+    fun tambahProdukMasuk(@Body produkMasuk: ProdukMasuk): Call<ResponseMessage>
+
+    //Exit Item
+    @GET("barang_keluar")
+    fun getExitProduct(): Call<List<ProdukKeluarxProduk>>
+
+    @POST("barang_keluar")
+    fun tambahProdukKeluar(@Body produkKeluar: ProdukKeluar): Call<ResponseMessage>
+
+    //Report
+    @GET("laporan_stok")
+    fun getReport(): Call<List<Report>>
+
 
 }

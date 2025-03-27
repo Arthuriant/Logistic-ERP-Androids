@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_ReportItem"
+        android:icon="@drawable/ic_reportitem"
+        android:title="ReportItem" />
+
+    <item
+        android:id="@+id/navigation_IncomingItem"
+        android:icon="@drawable/ic_incomingitem"
+        android:title="IncomingItem" />
+    <item
+        android:id="@+id/navigation_ExitItem"
+        android:icon="@drawable/ic_exititem"
+        android:title="ExitItem" />
+
+
+</menu>

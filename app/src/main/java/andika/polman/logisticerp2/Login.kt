@@ -38,15 +38,25 @@ class Login : AppCompatActivity() {
                 password = password
             )
 
-            RetrofitClient.instance.loginUser(loginaccount).enqueue(object :  Callback<LoginResponse>  {
+            RetrofitClient.instance.loginUser(loginaccount).enqueue(object : Callback<LoginResponse> {
                 override fun onResponse(call: Call<LoginResponse>, response: Response<LoginResponse>) {
                     if (response.isSuccessful) {
                         val loginResponse = response.body()
                         if (loginResponse?.status == "success") {
                             Toast.makeText(this@Login, "Login berhasil", Toast.LENGTH_SHORT).show()
 
-                            // Navigasi ke halaman utama
-                            val intent = Intent(this@Login, MainActivity::class.java)
+                            // Ambil role dari respons API
+                            val role = loginResponse.user?.role
+
+                            val intent = when (role) {
+                                1 -> Intent(this@Login, MainActivity::class.java) // Admin
+                                2 -> Intent(this@Login, SeconActivity::class.java) // User
+                                else -> {
+                                    Toast.makeText(this@Login, "Role tidak dikenali!", Toast.LENGTH_SHORT).show()
+                                    return
+                                }
+                            }
+
                             startActivity(intent)
                             finish() // Tutup halaman login agar tidak bisa kembali dengan tombol "Back"
                         } else {
@@ -57,11 +67,11 @@ class Login : AppCompatActivity() {
                     }
                 }
 
-
                 override fun onFailure(call: Call<LoginResponse>, t: Throwable) {
                     Toast.makeText(this@Login, "Gagal terhubung ke server!", Toast.LENGTH_SHORT).show()
                 }
             })
         }
+
     }
 }

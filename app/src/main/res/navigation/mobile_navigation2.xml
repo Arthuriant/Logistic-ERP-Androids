@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation2"
+    app:startDestination="@+id/navigation_ReportItem">
+
+    <fragment
+        android:id="@+id/navigation_IncomingItem"
+        android:name="andika.polman.logisticerp2.ui.User.IncomingItem.IncomingitemFragment"
+        android:label="IncomingItem"
+        tools:layout="@layout/fragment_incomingitem" />
+
+    <fragment
+        android:id="@+id/navigation_FormIncomingItem"
+        android:name="andika.polman.logisticerp2.ui.User.IncomingItem.FormIncomingItemFragment"
+        android:label="FormIncomingItem"
+        tools:layout="@layout/fragment_form_incoming_item" />
+
+
+    <fragment
+        android:id="@+id/navigation_ExitItem"
+        android:name="andika.polman.logisticerp2.ui.User.ExitItem.ExititemFragment"
+        android:label="ExitItem"
+        tools:layout="@layout/fragment_exititem" />
+
+    <fragment
+        android:id="@+id/navigation_FormExitItem"
+        android:name="andika.polman.logisticerp2.ui.User.ExitItem.FormExitItemFragment"
+        android:label="FormExitItem"
+        tools:layout="@layout/fragment_form_exit_item" />
+
+    <fragment
+        android:id="@+id/navigation_ReportItem"
+        android:name="andika.polman.logisticerp2.ui.User.ReportItem.ReportitemFragment"
+        android:label="ReportItem"
+        tools:layout="@layout/fragment_reportitem" />
+
+    <action
+        android:id="@+id/action_IncomingFragment_to_FormIncomingFragment"
+        app:destination="@id/navigation_FormIncomingItem" />
+
+    <action
+        android:id="@+id/action_FormIncomingFragment_to_IncomingFragment"
+        app:destination="@id/navigation_IncomingItem" />
+
+
+    <action
+        android:id="@+id/action_ExitFragment_to_FormExitFragment"
+        app:destination="@id/navigation_FormExitItem" />
+
+    <action
+        android:id="@+id/action_FormExitFragment_to_ExitFragment"
+        app:destination="@id/navigation_ExitItem" />
+
+
+</navigation>
