@@ -123,7 +123,7 @@ class FormExitItemFragment : Fragment() {
                     Toast.makeText(requireContext(), "Transaksi Baru", Toast.LENGTH_SHORT).show()
                 } else {
                     // Jika respons dari server gagal, tampilkan pesan error
-                    Toast.makeText(requireContext(), "Gagal Menambahkan Transaksi: ${response.message()}", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(requireContext(), "Stok Tidak Mencukupi Pengeluaran Barang", Toast.LENGTH_SHORT).show()
                 }
             }
 
