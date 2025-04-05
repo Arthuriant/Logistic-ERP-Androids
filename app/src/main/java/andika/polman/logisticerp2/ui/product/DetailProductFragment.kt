@@ -36,10 +36,10 @@ class DetailProductFragment : Fragment() {
         val view = inflater.inflate(R.layout.fragment_detail_product, container, false)
 
         txtNamaProduk = view.findViewById(R.id.tv_nama_produk)
-        txtKodeBarang = view.findViewById(R.id.tv_kode_barang)
+        txtKodeBarang = view.findViewById(R.id.tv_kode_barang2)
         txtIdKategori = view.findViewById(R.id.tv_id_kategori)
         txtDetailMinimum = view.findViewById(R.id.tv_stok_minimum)
-        txtHargaBeli = view.findViewById(R.id.tv_harga_beli)
+        txtHargaBeli = view.findViewById(R.id.tv_harga_beli2)
         txtHargaJual = view.findViewById(R.id.tv_harga_jual)
         btnEditProduct = view.findViewById(R.id.btn_editProduk)
         btnDeleteProduct = view.findViewById(R.id.btn_deleteProduk)
