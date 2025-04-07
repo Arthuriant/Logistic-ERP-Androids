@@ -24,7 +24,7 @@ class Login : AppCompatActivity() {
 
 
 
-        val etUsername = findViewById<EditText>(R.id.etUsername)
+        val etUsername = findViewById<EditText>(R.id.etEmail)
         val etPassword = findViewById<EditText>(R.id.etPassword)
         val btnLogin = findViewById<Button>(R.id.btnLogin)
 
