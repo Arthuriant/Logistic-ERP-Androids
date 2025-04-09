@@ -12,73 +12,82 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:padding="12dp"
+        android:padding="16dp"
         android:gravity="center_vertical">
 
         <!-- Bagian Teks -->
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="2"
+            android:layout_weight="1"
             android:orientation="vertical"
-            android:paddingEnd="12dp">
+            android:layout_marginEnd="8dp">
 
             <TextView
                 android:id="@+id/tv_id_produk_incomingitem"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Nama Produk"
-                android:textColor="#1687A7"
-                android:textSize="16sp"
-                android:textStyle="bold" />
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="2dp"
-                android:background="#276678"
-                android:layout_marginVertical="4dp"/>
+                android:textColor="#0056B7"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/poppins_bold"/>
 
             <TextView
                 android:id="@+id/tv_tanggalMasuk_incomingItem"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Tanggal Masuk: 12345"
-                android:textColor="#555555"
-                android:textSize="14sp" />
+                android:textColor="#444444"
+                android:textSize="14sp"
+                android:fontFamily="@font/poppins"
+                android:layout_marginTop="4dp"/>
 
             <TextView
                 android:id="@+id/tv_id_supplier_incomingItem"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Supplier: Elektronik"
-                android:textColor="#555555"
-                android:textSize="14sp" />
+                android:textColor="#444444"
+                android:textSize="14sp"
+                android:fontFamily="@font/poppins"
+                android:layout_marginTop="4dp"/>
 
             <TextView
                 android:id="@+id/tv_id_jumlahMasuk_incomingitem"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Jumlah: 2"
-                android:textColor="#555555"
-                android:textSize="14sp" />
+                android:textColor="#444444"
+                android:textSize="14sp"
+                android:fontFamily="@font/poppins"
+                android:layout_marginTop="4dp" />
 
             <TextView
                 android:id="@+id/tv_id_HargaBeli_incomingitem"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Harga Beli: 2"
-                android:textColor="#555555"
-                android:textSize="14sp" />
+                android:textColor="#444444"
+                android:textSize="14sp"
+                android:fontFamily="@font/poppins"
+                android:layout_marginTop="4dp" />
 
         </LinearLayout>
 
-        <!-- Gambar Produk -->
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:scaleType="centerCrop"
-            android:src="@drawable/ic_supplier"/>
+        <androidx.cardview.widget.CardView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="2dp">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_teddy" />
+        </androidx.cardview.widget.CardView>
 
     </LinearLayout>
 
