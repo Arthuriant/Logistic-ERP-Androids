@@ -5,7 +5,6 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
-import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import andika.polman.logisticerp2.databinding.ActivitySeconBinding
 
@@ -29,7 +28,7 @@ class SeconActivity : AppCompatActivity() {
                 R.id.navigation_ReportItem, R.id.navigation_IncomingItem, R.id.navigation_ExitItem
             )
         )
-        setupActionBarWithNavController(navController, appBarConfiguration)
+
         navView.setupWithNavController(navController)
     }
 }

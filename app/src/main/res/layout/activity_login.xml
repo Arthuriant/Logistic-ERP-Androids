@@ -58,6 +58,7 @@
             android:layout_marginTop="40dp"
             android:background="@drawable/input_border"
             android:fontFamily="@font/poppins"
+            android:drawableStart="@drawable/ic_email"
             android:hint="Email"
             android:inputType="textEmailAddress"
             android:padding="16dp" />
