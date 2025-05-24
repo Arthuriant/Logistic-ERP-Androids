@@ -9,4 +9,5 @@
     <color name="white">#FFFFFFFF</color>
     <color name="Putih">#FFD3E0EA </color>
     <color name="BiruGelap">#FF276678 </color>
+    <color name="primary_blue">#2F80ED</color>
 </resources>

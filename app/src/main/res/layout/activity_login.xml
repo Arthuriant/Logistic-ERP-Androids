@@ -1,45 +1,97 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:gravity="center"
+    android:background="#2F80ED"
     tools:context=".Login">
 
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="202dp"
-        android:layout_height="289dp"
-        android:layout_gravity="center_horizontal"
-        android:src="@drawable/logotemplate" />
-
-    <EditText
-        android:id="@+id/etUsername"
+    <!-- Bagian Atas: Header Biru -->
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="64dp"
-        android:layout_marginHorizontal="24dp"
-        android:layout_marginTop="32dp"
-        android:hint="Username"
-        android:inputType="text" />
+        android:layout_height="172dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="24dp">
 
-    <EditText
-        android:id="@+id/etPassword"
+        <ImageView
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            android:src="@drawable/ic_logo" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/poppins_bold"
+            android:text="Welcome Back"
+            android:textColor="#FFFFFF"
+            android:textSize="22sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/poppins"
+            android:text="Sign in to continue"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <!-- Bagian Bawah: Form Putih -->
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="63dp"
-        android:layout_marginHorizontal="24dp"
-        android:layout_marginTop="16dp"
-        android:hint="Password"
-        android:inputType="textPassword" />
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:background="@drawable/rounded_white_top">
 
-    <Button
-        android:id="@+id/btnLogin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:layout_gravity="center_horizontal"
-        android:text="Login"/>
+        <!-- Email -->
+        <EditText
+            android:id="@+id/etEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/input_border"
+            android:fontFamily="@font/poppins"
+            android:drawableStart="@drawable/ic_email"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:padding="16dp" />
 
+        <!-- Password dengan icon mata -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp">
+
+            <EditText
+                android:id="@+id/etPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/input_border"
+                android:drawableStart="@drawable/ic_lock"
+                android:fontFamily="@font/poppins"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:padding="16dp" />
+        </RelativeLayout>
+
+        <!-- Tombol Login -->
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="LOGIN"
+            android:textAllCaps="true"
+            android:textColor="#FFFFFF"
+            android:fontFamily="@font/poppins_bold"
+            android:backgroundTint="#2F80ED" />
+    </LinearLayout>
 </LinearLayout>

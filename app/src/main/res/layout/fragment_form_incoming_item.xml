@@ -1,69 +1,97 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
     android:orientation="vertical"
-    android:padding="25dp">
+    android:background="@color/white">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@color/primary_blue"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingTop="6dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Form Product"
+            android:textColor="@android:color/white"
+            android:textSize="40sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="2dp"
+        android:layout_weight="2"
+        android:background="@drawable/rounded_top_white"
+        android:orientation="vertical"
+        android:padding="24dp">
     <!-- Nama Produk -->
-    <TextView
-        android:id="@+id/tv_titleformincomingitem"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="30dp"
-        android:text="Tambah Item Masuk"
-        android:textAlignment="center"
-        android:textColor="#276577"
-        android:textSize="34sp"
-        android:textStyle="bold" />
+        <TextView
+            android:id="@+id/tv_titleformincomingitem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:text="Tambah Item Masuk"
+            android:textAlignment="center"
+            android:textColor="#2F80ED"
+            android:textSize="30sp"
+            android:textStyle="bold" />
 
-    <Spinner
-        android:id="@+id/spinnerProdukMasuk"
-        android:layout_width="match_parent"
-        android:layout_height="59dp" />
+        <Spinner
+            android:id="@+id/spinnerProdukMasuk"
+            android:layout_width="match_parent"
+            android:layout_height="59dp"
+            android:fontFamily="@font/poppins"/>
 
-    <!-- Kode Barang -->
-    <EditText
-        android:id="@+id/et_tanggal_incomingitem"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:background="@android:drawable/editbox_background"
-        android:hint="Tanggal Item Masuk"
-        android:focusable="false"
-        android:clickable="true"
-        android:minHeight="48dp"
-        android:padding="10dp" />
-
-
-    <!-- ID Item Masuk -->
-    <Spinner
-        android:id="@+id/spinnerSupplierMasuk"
-        android:layout_width="match_parent"
-        android:layout_height="59dp" />
-
-    <EditText
-        android:id="@+id/et_Jumlah_incomingitem"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:background="@android:drawable/editbox_background"
-        android:hint="Jumlah"
-        android:inputType="number"
-        android:minHeight="48dp"
-        android:padding="10dp" />
+        <!-- Kode Barang -->
+        <EditText
+            android:id="@+id/et_tanggal_incomingitem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@android:drawable/editbox_background"
+            android:hint="Tanggal Item Masuk"
+            android:focusable="false"
+            android:clickable="true"
+            android:minHeight="48dp"
+            android:padding="10dp"
+            android:fontFamily="@font/poppins"/>
 
 
+        <!-- ID Item Masuk -->
+        <Spinner
+            android:id="@+id/spinnerSupplierMasuk"
+            android:layout_width="match_parent"
+            android:layout_height="59dp" />
 
+        <EditText
+            android:id="@+id/et_Jumlah_incomingitem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@android:drawable/editbox_background"
+            android:hint="Jumlah"
+            android:inputType="number"
+            android:minHeight="48dp"
+            android:padding="10dp"
+            android:fontFamily="@font/poppins"/>
 
-    <Button
-        android:id="@+id/btn_simpanIncomingItem"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:minHeight="48dp"
-        android:layout_marginTop="16dp"
-        android:backgroundTint="#276678"
-        android:text="Simpan"
-        android:textColor="#FFFFFF" />
+        <Button
+            android:id="@+id/btn_simpanIncomingItem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="SIMPAN"
+            android:textAllCaps="true"
+            android:textColor="#FFFFFF"
+            android:fontFamily="@font/poppins_bold"
+            android:backgroundTint="#2F80ED" />
+</LinearLayout>
 </LinearLayout>
