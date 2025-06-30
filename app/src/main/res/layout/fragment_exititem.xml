@@ -3,31 +3,66 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/white">
 
+    <!-- Isi Utama -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <TextView
+        <!-- HEADER -->
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="25dp"
-            android:text="Exit Item List"
-            android:textAlignment="center"
-            android:textColor="#276678"
-            android:textSize="34sp"
-            android:textStyle="bold" />
+            android:layout_height="100dp"
+            android:background="@color/primary_blue"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingTop="6dp">
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rv_ExitItem"
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Exit Item"
+                android:textColor="@android:color/white"
+                android:textSize="40sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- CARD WRAPPER -->
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="681dp"
-            android:layout_marginTop="20dp" />
+            android:layout_height="0dp"
+            android:layout_marginTop="2dp"
+            android:layout_weight="2"
+            android:background="@drawable/rounded_top_white"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <!-- TITLE INSIDE CARD -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:paddingBottom="8dp"
+                android:text="Exit Item List"
+                android:textColor="#2F80ED"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <!-- RECYCLER VIEW -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_ExitItem"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clipToPadding="false"
+                android:paddingTop="8dp"
+                android:scrollbars="vertical" />
+        </LinearLayout>
     </LinearLayout>
 
-
+    <!-- Floating Action Button -->
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab_addExitItem"
         android:layout_width="wrap_content"
@@ -36,6 +71,7 @@
         android:layout_marginEnd="25dp"
         android:layout_marginBottom="100dp"
         android:contentDescription="Tambah"
+        android:backgroundTint="@color/primary_blue"
         android:src="@drawable/ic_add"
         app:backgroundTint="#276577" />
 </FrameLayout>
